@@ -1,16 +1,18 @@
 {
   "manifest_version": 3,
   "name": "Fiverr Automation",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Automate Fiverr inbox management with search and scheduled messages",
   "permissions": [
     "storage",
     "alarms",
     "activeTab",
-    "scripting"
+    "scripting",
+    "tabs"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "action": {
     "default_popup": "popup.html",
@@ -27,5 +29,11 @@
   },
   "host_permissions": [
     "https://www.fiverr.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.fiverr.com/*"],
+      "js": ["content.js"]
+    }
   ]
 }
