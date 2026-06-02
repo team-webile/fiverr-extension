@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fiverr Automation</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 15px; width: 300px; }
+    .section { margin-bottom: 20px; }
+    h3 { margin-top: 0; }
+    input, textarea, button { width: 100%; padding: 8px; margin-bottom: 10px; }
+    button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+    button:hover { background: #45a049; }
+    .message-item { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Fiverr Automation</h2>
+  
+  <div class="section">
+    <h3>Inbox Search</h3>
+    <input type="text" id="searchQuery" placeholder="Search messages...">
+    <button id="searchBtn">Search</button>
+  </div>
+  
+  <div class="section">
+    <h3>Schedule Message</h3>
+    <input type="text" id="recipient" placeholder="Recipient username">
+    <textarea id="message" rows="3" placeholder="Message content"></textarea>
+    <input type="datetime-local" id="scheduleTime">
+    <button id="scheduleBtn">Schedule Message</button>
+  </div>
+  
+  <div class="section">
+    <h3>Scheduled Messages</h3>
+    <div id="scheduledMessages"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
